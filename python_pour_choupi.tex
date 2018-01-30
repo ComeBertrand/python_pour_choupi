@@ -2,12 +2,16 @@
 \usepackage[latin1]{inputenc}
 \usepackage[francais]{babel}
 \usepackage{wasysym}
+\usepackage{lipsum}
 
 \newcommand\Chapter[2]{
 	\chapter[#1]{#1\\[2ex]\Large\itshape#2}
 }
 \newcommand\Section[2]{
 	\section[#1]{#1\\[1ex]\large\itshape#2}
+}
+\newcommand\Subsection[2]{
+	\subsection[#1]{#1\\[1ex]\normalsize\itshape#2}
 }
 
 \title{Le Python expliqu\'e \`a mon Choupi}
@@ -80,7 +84,19 @@ faire avec un air s\'ev\`ere (attention \`a la punition en cas de mauvaise r\'ep
 et faciles, le but \'etant que tu pratique les choses 2-3 fois afin de te faire la main. C'est en forgeant qu'on devient forgeron, toussa toussa \dots
 \newpage
 \Section{Les Maths}{Avec un grand 'M'}
-blablabla
+\lipsum[3]
+\Subsection{Alg\`ebre de Boole}{Tu tires ou tu pointes?}
+Alg\`ebre de Boole ou calcul bool\'een.
+Introduction (le vrai, le faux, le 0, le 1).
+Les differents types d'operateurs (avec des exemples pour chacun) + tables de verites.
+Quelques exemples plus complexes, comment tester toutes les possibilites.
+Exercices.
+
+\Subsection{Modulo}{}
+\lipsum[3]
+
+\Subsection{Binaire et Hexadecimal}{}
+\lipsum[3]
 
 \backmatter
 
