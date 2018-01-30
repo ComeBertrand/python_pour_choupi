@@ -1,6 +1,7 @@
 \documentclass[a4paper, 11pt, oneside, draft]{book}
 \usepackage[latin1]{inputenc}
 \usepackage[francais]{babel}
+\usepackage{wasysym}
 
 \newcommand\Chapter[2]{
 	\chapter[#1]{#1\\[2ex]\Large\itshape#2}
@@ -19,83 +20,65 @@
 
 \frontmatter
 \Chapter{Introduction}{Le pourquoi du comment}
-Pourquoi s'emmerder \`a apprendre le Python? Je suis s\^ur que tu te pose la question mon amour.
-Et m\^eme si je te sais naturellement curieuse et que tu aime apprendre de nouvelles chose, pourquoi se faire chier \`a apprendre un langage de programmation?
-Surtout sachant que \c ca demande un peu [beaucoup?] de boulot. Apr\`es tout si \c ca te passionnait tant que \c ca, tu en aurai fait ton boulot [Ebawai], et d'ailleurs y'a des gens qui en ont fait leur boulot et qui seront l\`a pour faire les trucs relou d'informaticien \`a ta place.
-
-Mais [..] [il y a toujours un mais]
-
+Pourquoi s'emmerder \`a apprendre le Python? \\
+Je suis s\^ur que tu te pose la question mon amour. Et m\^eme si je te sais naturellement curieuse et que tu aime apprendre de nouvelles chose, pourquoi se faire chier \`a apprendre un langage de programmation?\\
+Surtout sachant que \c ca demande un peu \textit{(beaucoup?)} de boulot.\\
+Apr\`es tout si \c ca te passionnait tant que \c ca, tu en aurai fait ton boulot \textit{(Ebawai)}, et d'ailleurs y'a des gens qui en ont fait leur boulot et qui seront l\`a pour faire les trucs relou d'informaticien \`a ta place.\\
+\\
+Mais \dots  \textit{(il y a toujours un mais)}\\
+\\
 Je pense quand m\^eme qu'il te serai profitable de connaitre les bases de la programmation et de savoir
 \'ecrire toute seule comme une grande tes propres scripts (voir des petits logiciels, ne t'inqui\`ete pas,
 on reviendra plus tard sur la terminologie), et ce pour plusieurs raisons:
-    1) Certe il y a des gens qui sont pay\'e pour faire \c ca, mais il n'y en a pas forc\'ement des masses, du
-coup tu deviens vachement tributaire de leur disponibilit\'e pour faire ton boulot.
-    2) Aujourd'hui tr\`es peu de biologistes savent coder, mais rien ne dis que \c ca va durer (les mômes font
-du python au lyc\'ee de nos jours). Disons que \c ca te permettrai d'\'eviter de passer pour un dinosaure dans
-quelques ann\'ees.
-    3) Comme dis juste au dessus, les biologistes savant coder sont rares. Et tout ce qui est rare est cher!
-Disons que \c ca fait toujours une ligne de plus sur le CV (que les excit\'es de la recherche sauront probablement
-appr\'ecier).
-    4) Je pense (et l\`a je donne mon avis d'informaticien, donc \c ca vaut ce que \c ca vaut) que de plus en plus de
-machines, logiciels, [..] vont donner la possibilit\'e \`a leurs utilisateurs de les customiser/augmenter via de la
-programmation (ex: Excel va inclure Python comme langage pour faire des macros). Du coup savoir programmer va
-sûrement devenir de plus en plus utile.
-    5) Qui sait, \c ca se trouve tu va aimer \c ca :)
-    6) Moi c'est sûr, je vais aimer \c ca
-
-Bon, maintenant que j'ai finis mon oeuvre de propagande voyons un peu \`a quoi \c ca peut servir de savoir coder
-(parce que c'est bien beau de devoir le faire, encore faut il que \c ca serve \`a quelque chose).
-En gros, coder \c ca sert \`a automatiser les taches relous et \`a traiter les gros volumes de donn\'ees (ceux qu'on
-peut pas se coltiner \`a la main, \`a moins d'\^etre pr\^et \`a y passer 2 ou 3 si\`ecles).
+\begin{enumerate}
+\item Certe il y a des gens qui sont pay\'e pour faire \c ca, mais il n'y en a pas forc\'ement des masses, du coup tu deviens vachement tributaire de leur disponibilit\'e pour faire ton boulot.
+\item Aujourd'hui tr\`es peu de biologistes savent coder, mais rien ne dis que \c ca va durer (les mômes font du python au lyc\'ee de nos jours). Disons que \c ca te permettrai d'\'eviter de passer pour un dinosaure dans quelques ann\'ees.
+\item Comme dis juste au dessus, les biologistes savant coder sont rares. Et tout ce qui est rare est cher!  Disons que \c ca fait toujours une ligne de plus sur le CV (que les excit\'es de la recherche sauront probablement appr\'ecier).
+\item Je pense (et l\`a je donne mon avis d'informaticien, donc \c ca vaut ce que \c ca vaut) que de plus en plus de machines, logiciels, \dots vont donner la possibilit\'e \`a leurs utilisateurs de les customiser/augmenter via de la programmation (ex: Excel va inclure Python comme langage pour faire des macros). Du coup savoir programmer va sûrement devenir de plus en plus utile.
+\item Qui sait, \c ca se trouve tu va aimer \c ca \smiley{}
+\item Moi c'est s\^ur, \c ca va m'amuser
+\end{enumerate}
+\vspace{5mm}
+Bon, maintenant que j'ai finis mon oeuvre de propagande voyons un peu \`a quoi \c ca peut servir de savoir coder (parce que c'est bien beau de devoir le faire, encore faut il que \c ca serve \`a quelque chose).\\
+En gros, coder \c ca sert \`a automatiser les taches relous et \`a traiter les gros volumes de donn\'ees (ceux qu'on peut pas se coltiner \`a la main, \`a moins d'\^etre pr\^et \`a y passer 2 ou 3 si\`ecles).\\
 Quelques examples en vracs de choses que \c ca permet de faire:
-Regrouper de renommer automatiquement des fichiers (en faisant plein de tris par type de fichier, par date, etc[..]).
-Nettoyer des sets de donn\'ees (parce que soyont franc, y'a souvent un paquet de merde dans nos fichiers excels).
-Croiser des donn\'ees provenant de plusieurs fichiers diff\'erents.
-Faire des jolis graphes.
-Faire des calculs,stats sur des tr\`es gros volume de donn\'ees (y'a toujours un moment o\`u Excel casse).
-Se la p\^eter devant ses coll\`egues
-
-
+\begin{itemize}
+\item Regrouper de renommer automatiquement des fichiers (en faisant plein de tris par type de fichier, par date, etc\dots)
+\item Nettoyer des sets de donn\'ees (parce que soyont franc, y'a souvent un paquet de merde dans nos fichiers excels)
+\item Croiser des donn\'ees provenant de plusieurs fichiers diff\'erents
+\item Faire des jolis graphes
+\item Faire des calculs ou statistiques sur des tr\`es gros volume de donn\'ees (y'a toujours un moment o\`u Excel casse)
+\item Se la p\^eter devant ses coll\`egues
+\end{itemize}
+\vspace{5mm}
 Concr\`etement quand on code, on peut produire plusieurs sortes de choses:
-Des scripts: un script est un programme que tu lance, qui va effectuer une (ou plusieurs) actions d\'efinies puis terminer
-une fois qu'il a fini (un exemple simple de script, \c ca serait un programme que tu lance, qui supprime les fichiers qui trainent
-dans la corbeille puis qui se termine).
-Des logiciels: un logiciel, c'est un programme que tu lance, et qui ne termine pas tant que tu ne l'a pas ferm\'e. Un logiciel
-propose (la plupart du temps) une ou plusieurs actions \`a l'utilisateur, que l'utilisateur peut effectuer autant de fois qu'il le
-d\'esire.
-Des librairies: une librairie c'est une collection d'actions qui peut \^etre r\'eutilis\'e dans d'autres programme. C'est en
-utilisant des librairies qu'on peut faire des programmes de plus en plus complexe sans avoir \`a tout \'ecrire depuis le d\'ebut.
-
-Pour faire court, quand on d\'ebute en informatique on fait en g\'en\'eral des scripts, quand on en fait son m\'etier on fait des logiciels,
-et quand on est tr\`es fort on fait des libraires (en gros ceux qui codent des librairies ce sont les informaticiens des autres
-informaticiens).
-
-L'objectif de ce petit livre mon choupi n'est pas de faire de toi une ing\'enieure en d\'eveloppement logiciel (c'est pas ton m\'etier, et
-\`a priori tu ne compte pas le devenir), mais de te donner assez de billes pour que tu puisse te faire des scripts, voir des petits
-logiciels. Et si tu te chauffe tu pourrais m\^eme te faire une petite librairie perso :).
-Pour \c ca je vais essayer de d\'ecouper ce livre en petits chapitres rapides \`a lire, et d'\'eviter au maximum les informations dont tu
-n'aurait pas concr\`etement besoin (quitte \`a y revenir plus tard dans des chapitres plus avanc\'es). En gros tu avoir une formation
-taill\'ee sur mesure (petite veinarde!).
-
-Sans plus attendre, attaquons dans le vif [..]
+\begin{itemize}
+\item Des scripts: un script est un programme que tu lance, qui va effectuer une (ou plusieurs) actions d\'efinies puis terminer une fois qu'il a fini (un exemple simple de script, \c ca serait un programme que tu lance, qui supprime les fichiers qui trainent dans la corbeille puis qui se termine)
+\item Des logiciels: un logiciel, c'est un programme que tu lance, et qui ne termine pas tant que tu ne l'a pas ferm\'e. Un logiciel propose (la plupart du temps) une ou plusieurs actions \`a l'utilisateur, que l'utilisateur peut effectuer autant de fois qu'il le d\'esire
+\item Des librairies: une librairie c'est une collection d'actions qui peut \^etre r\'eutilis\'e dans d'autres programme. C'est en utilisant des librairies qu'on peut faire des programmes de plus en plus complexe sans avoir \`a tout \'ecrire depuis le d\'ebut
+\end{itemize}
+\vspace{5mm}
+Pour faire court, quand on d\'ebute en informatique on fait en g\'en\'eral des scripts, quand on en fait son m\'etier on fait des logiciels, et quand on est tr\`es fort on fait des libraires (en gros ceux qui codent des librairies ce sont les informaticiens des autres informaticiens).\\
+L'objectif de ce petit livre mon choupi n'est pas de faire de toi une ing\'enieure en d\'eveloppement logiciel (c'est pas ton m\'etier, et \`a priori tu ne compte pas le devenir), mais de te donner assez de billes pour que tu puisse te faire des scripts, voir des petits logiciels. Et si tu te chauffe tu pourrais m\^eme te faire une petite librairie perso.\\
+Pour \c ca je vais essayer de d\'ecouper ce livre en petits chapitres rapides \`a lire, et d'\'eviter au maximum les informations dont tu n'aurait pas concr\`etement besoin (quitte \`a y revenir plus tard dans des chapitres plus avanc\'es). En gros tu avoir une formation taill\'ee sur mesure (petite veinarde!).\\
+\\
+Sans plus attendre, attaquons dans le vif \dots
 
 \mainmatter
 
 \Chapter{Th\'eorie}{Moi je veux aller vivre en th\'eorie, parcequ'en th\'eorie tout se passe bien}
-J'imagine que tu meurt d'impatience de te lancer dans le concret, de taper des lignes de codes sur un \'ecran noir comme les hackers
-dans les films am\'ericain. Mais pour que tu comprenne un minimum ce que tu es en train de faire, on va pas y couper il te faut
-un poil de th\'eorie. Apr\`es rassure toi, je vais condenser au maximum et ne garder que ce qui est absolument indispensable. Le but
-c'est pas d'y passer 3 mois non plus.
-
+J'imagine que tu meurt d'impatience de te lancer dans le concret, de taper des lignes de codes sur un \'ecran noir comme les hackers dans les films am\'ericain.
+Mais pour que tu comprenne un minimum ce que tu es en train de faire, on va pas y couper il te faut un poil de th\'eorie.
+Apr\`es rassure toi, je vais condenser au maximum et ne garder que ce qui est absolument indispensable. Le but c'est pas d'y passer 3 mois non plus.\\
+\\
 Ce chapitre va se d\'ecouper en trois parties, une partie de maths (je vois d'ici ton visage r\'ejoui \`a cette perspective), une partie
 d'informatique th\'eorique et une derni\`ere partie qui est un peu moins th\'eorique et qui portera sur tout ce qui est environnement
-de d\'eveloppement.
-
+de d\'eveloppement.\\
+\\
 Je pr\'ef\`ere te pr\'evenir tout de suite, je metterais des exercices dans ces chapitres. Et oui, carr\'ement des exercices que je te regarderais
 faire avec un air s\'ev\`ere (attention \`a la punition en cas de mauvaise r\'eponse!). Plus s\'erieusement, ces exercices seront courts
-et faciles, le but \'etant que tu pratique les choses 2-3 fois afin de te faire la main. C'est en forgeant qu'on devient forgeron, toussa toussa [..]
-
-
+et faciles, le but \'etant que tu pratique les choses 2-3 fois afin de te faire la main. C'est en forgeant qu'on devient forgeron, toussa toussa \dots
+\newpage
 \Section{Les Maths}{Avec un grand 'M'}
 blablabla
 
